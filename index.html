@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenkins</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #e83e8c;
+      }
+      .container > p {
+        font-size: 2rem;
+        font-weight: 600;
+        color: aliceblue;
+        margin: 0;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Welcome to the world of DevOps with Jenkins!</p>
+      <p>
+        This application, powered by index.html, is your guide to mastering
+        DevOps practices.
+      </p>
+      <p>Get ready to automate, build, and deploy with ease.</p>
+      <p>Stay tuned for hands-on tutorials and practical insights.</p>
+      <p>Happy learning!</p>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+      const p = document.querySelectorAll("p");
+      const colors = [
+        "#e74c3c",
+        "#8e44ad",
+        "#3498db",
+        "#e67e22",
+        "#2ecc71",
+        "#e83e8c",
+      ];
+      const changeColor = () => {
+        let random = Math.floor(Math.random() * colors.length);
+        container.style.backgroundColor = colors[random];
+      };
+      setInterval(changeColor, 1000);
+    </script>
+  </body>
+</html>
