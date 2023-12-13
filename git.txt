@@ -1,0 +1,32 @@
+1. Branching
+
+    git branch new_branch_name  {for crrating new branch}
+
+    git checkout new_branch_name {for moving one branch to other branch}
+
+    git add file_name  {adding a specific file to git }
+
+2. Merging
+
+    git merge new_branch_name (NOTE :- you should currently in main branch)
+
+3. Rebasing
+
+    git rebase master {NOTE :- you should currently in new_branch_name or vice-versa}
+
+
+4. generating ssh keys
+
+    ssh-keygen
+    
+    {save to github}
+
+    ssh -T git@github.com
+
+5. reverting back to previous file 
+
+    git log
+
+    {COPY} first eight character of that commit in which you want to revert
+
+    git checkout {PASTE} {file_name which you want to revert} 
