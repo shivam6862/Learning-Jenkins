@@ -14,6 +14,9 @@ pipeline {
                     bat 'node --version'
                     bat 'pip --version'
                     bat 'python --version'
+                    bat 'java --version'
+                    bat 'git --version'
+                    bat 'npm --version'
                     bat 'dir'
                 }
             }
@@ -21,8 +24,14 @@ pipeline {
         stage('Run Applications') {
             steps {
                 script {
-                    bat 'node app.js'
-                    bat 'python main.py'
+                    parallel(
+                        "Run Node.js": {
+                            bat 'node Javascript/app.js'
+                        },
+                        "Run Python": {
+                            bat 'python Python/main.py'
+                        }
+                    )
                 }
             }
         }

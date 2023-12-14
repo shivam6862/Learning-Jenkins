@@ -1,1 +1,7 @@
 IMAGE
+Learning-Jenkins-java/.mvn
+Learning-Jenkins-java/src/main/resources/application.properties
+Learning-Jenkins-java/mvnw
+Learning-Jenkins-java/mvnw.cmd
+Learning-Jenkins-java/target
+.vscode
