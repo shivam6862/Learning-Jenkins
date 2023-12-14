@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    git branch: "main", url: 'https://github.com/shivam6862/Learning-Jenkins.git'
+                }
+            }
+        }
+        stage('Check Versions') {
+            steps {
+                script {
+                    bat 'node --version'
+                    bat 'pip --version'
+                    bat 'python --version'
+                    bat 'dir'
+                }
+            }
+        }
+        stage('Run Applications') {
+            steps {
+                script {
+                    bat 'node app.js'
+                    bat 'python main.py'
+                }
+            }
+        }
+    }
+}
