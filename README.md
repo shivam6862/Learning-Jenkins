@@ -64,15 +64,23 @@ Provide an overview of your project's folder structure. Explain the purpose of e
 
 ```
 project-root/
-|-- src/
-|   |-- main/
-|   |   |-- java/
-|   |   |-- resources/
-|   |-- test/
-|       |-- java/
 |-- html/
+    |-- index.html
 |-- Javascript/
+    |-- app.js
+|-- Learning-Jenkins-java/
+    |-- src/
+        |-- main/
+            |-- java/
+            |-- resources/
+        |-- test/
+            |-- java/
 |-- python/
-|-- jenkins/
+    |-- main.py
 |-- text/
+    |-- docker.txt
+    |-- git.txt
+    |-- Jenkins-Pipeline.txt
+    |-- Rest.txt
+|-- jenkins/
 ```

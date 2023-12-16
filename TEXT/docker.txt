@@ -1,0 +1,144 @@
+1. **Run a container in the background:**
+   ```bash
+   docker run -d nginx
+   ```
+   This command runs an instance of the NGINX web server in the background.
+
+2. **Run a container with a specific name:**
+   ```bash
+   docker run --name my_container nginx
+   ```
+   This command runs an NGINX container with the name "my_container."
+
+3. **Run a container and map a port:**
+   ```bash
+   docker run -p 8080:80 nginx
+   ```
+   This maps port 8080 on the host to port 80 on the NGINX container.
+
+4. **Run a container with environment variables:**
+   ```bash
+   docker run --env MYSQL_ROOT_PASSWORD=my-secret-pw mysql
+   ```
+   This sets the `MYSQL_ROOT_PASSWORD` environment variable when running a MySQL container.
+
+5. **Using Command Line (PowerShell or Command Prompt):**
+   - Open a PowerShell or Command Prompt window.
+   - Run the following command:
+
+     ```powershell
+     docker ps
+     ```
+
+     This command will display a list of running containers along with their details.
+
+   - To get the count of running containers, you can use the following command:
+
+     ```powershell
+     (docker ps -q).Count
+     ```
+
+
+6. To stop a Docker container, you can use the `docker stop` command. Here's the basic syntax:
+
+    ```bash
+    docker stop my_container
+    ```
+    ```bash
+    docker stop <container_id>
+    ```
+    ```bash
+    docker ps
+    ```
+
+7. The `docker ps -a` command lists all containers, including both running and stopped containers. Here's the basic syntax:
+
+    ```bash
+    docker ps -a
+    ```
+
+8.The ufw allow 5000 command is used to open port 5000 for incoming traffic on a system that has the Uncomplicated Firewall (UFW) installed. UFW is a user-friendly interface for managing iptables, the default firewall management tool on many Linux distributions.
+    ```bash
+    ufw allow 5000
+    ```
+
+9. The `docker rm` command is used to remove one or more containers. Here's the basic syntax:
+
+    ```
+    docker rm [OPTIONS] CONTAINER [CONTAINER...]
+    docker rm [id]
+    ```
+10. If you want to force removal of a running container without stopping it first, you can use the -f or --force option:
+    ```
+    docker rm -f [id]
+    ```
+
+11. The docker system prune command is used to clean up the Docker system by removing unused data such as stopped containers, dangling images, and unused networks. This command is handy for freeing up disk space on your system.
+    ```
+    docker system prune
+    ```
+
+12. The `docker exec` command is used to run a command inside a running Docker container. The `-it` options are commonly used together to run the command interactively in the terminal. Here's the basic syntax:
+
+    ```bash
+    docker exec -it CONTAINER_ID_OR_NAME COMMAND [ARGS...]
+    ```
+    ```bash
+    docker exec -it my_container bash
+    ```
+13. he docker cp command is used to copy files or directories between a Docker container and the local file system. It allows you to transfer data into or out of a running container. Here is the basic syntax:
+    ```
+    docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+    docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+    ```
+14. Certainly, if you want to use the `docker commit` command without specifying a repository or tag, Docker will automatically generate a unique image name. Here's the basic syntax:
+    ```bash
+    docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+    ```
+If you just provide the container ID and omit the repository and tag, Docker will create a new image with a generated name. For example:
+    ```bash
+    docker commit container_id
+    ```
+
+
+15.
+    1. **Managing Containers:**
+    - `docker run`: Create and start a container.
+    - `docker ps`: List running containers.
+    - `docker ps -a`: List all containers (running and stopped).
+    - `docker exec`: Run a command inside a running container.
+    - `docker stop`: Stop a running container.
+    - `docker start`: Start a stopped container.
+    - `docker restart`: Restart a running or stopped container.
+    - `docker pause` / `docker unpause`: Pause/unpause running processes in a container.
+    - `docker rm`: Remove one or more containers.
+
+    2. **Managing Images:**
+    - `docker images`: List local images.
+    - `docker pull`: Pull an image from a registry.
+    - `docker build`: Build an image from a Dockerfile.
+    - `docker push`: Push an image to a registry.
+    - `docker rmi`: Remove one or more images.
+    - `docker tag`: Create a tag for an image.
+
+    3. **Managing Networks:**
+    - `docker network ls`: List networks.
+    - `docker network create`: Create a new network.
+    - `docker network rm`: Remove one or more networks.
+
+    4. **Managing Volumes:**
+    - `docker volume ls`: List volumes.
+    - `docker volume create`: Create a new volume.
+    - `docker volume rm`: Remove one or more volumes.
+
+    5. **Inspecting and Debugging:**
+    - `docker inspect`: Display detailed information about containers, images, networks, or volumes.
+    - `docker logs`: Fetch the logs of a container.
+    - `docker events`: Get real-time events from the server.
+    - `docker top`: Display the running processes of a container.
+    - `docker diff`: Inspect changes on a container's filesystem.
+
+    6. **System Commands:**
+    - `docker info`: Display system-wide information.
+    - `docker version`: Show Docker version information.
+    - `docker system prune`: Remove unused data (containers, networks, images, and volumes).
